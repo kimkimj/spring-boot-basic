@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class DeleteController {
     // Path Variable로 URI에서 값 받기
     // http://localhost:8081/string-값-아무거나
-    @DeleteMapping(value = "/{variable}")
+    @DeleteMapping(value = "/hi/{variable}")
     public String DeleteVariable(@PathVariable String variable){
         return variable;
     }
