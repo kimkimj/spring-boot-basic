@@ -13,7 +13,6 @@ public class GetController {
     // Request Mapping: HTTP의 모든 요청을 받는다
     @RequestMapping("/hello")
     public String hello(){
-        log.info("getName으로 요청이 들어왔습니다.");
         return "hello world";
     }
 
@@ -22,7 +21,6 @@ public class GetController {
     //localhost:8081/cat 이렇게 요청하면 정해진 응답을 반환
     @GetMapping("/cat")
     public String getName() {
-        log.info("cat으로 요청이 들어왔습니다.");
         return "Lulu the Cat";
     }
 
@@ -38,8 +36,6 @@ public class GetController {
     // PathVariable과 GetMapping의 변수이름을 동일시 할 수 없을 때
     @GetMapping(value = "/variable2/{variable}")
     public String getVariable2(@PathVariable("variable") String lulu){
-
-        log.info("getVariable1으로  요청이 들어왔습니다.");
         return lulu;
     }
 
